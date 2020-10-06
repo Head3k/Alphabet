@@ -52,7 +52,8 @@ char computing(char array[][16],int count_words){
         printf("%d words -> ", i + 1);
         printf("%s\n", array[i]); // print [i] word from the array
         i++;                           // var for next [i] word
-    }   
+    }
+    return (array[0][0]);
 }
 
 int stringing(             //
@@ -64,8 +65,9 @@ int stringing(             //
 	int n = 0;
 	int t;
 	char str;
-	char array[count_words][16]; 
-    memset(array,0,16*count_words);                        // 5 words per 16 symbols
+	char array[count_words][16];
+	char back_array;
+        memset(array,0,16*count_words);                        // 5 words per 16 symbols
 	while (i<count_words){
 		while ((str = getchar()) != ' '){
 			if (str != ' '){
@@ -84,7 +86,9 @@ int stringing(             //
 		i++;
 		n = 0;
 	}
-    computing(array, count_words); // void function
+    back_array = computing(array, count_words); // void function
+    //printf("\nb -> %C",back_array);
+    //printf("\na -> %c",array[0][0]);
     return 0;                                     
 }
                            
