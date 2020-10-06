@@ -1,7 +1,7 @@
 #include <computing.h>
 #include <ctest.h>
 #include <string.h>
-/*
+
 CTEST(SORT_TEST, FIRST_TEST)
 {
 	char* k1 = "shit";
@@ -26,7 +26,7 @@ CTEST(SORT_TEST, THIRD_TEST)
 	int expected = 1;
 	ASSERT_EQUAL(expected, result);
 }
-*/
+
 
 CTEST(COMPUTING_TEST, FIRST_TEST)
 {

@@ -6,9 +6,12 @@ int print(char array[][16], int count_words){
 	int i = 0;   
 	//printf("count-->%d\n",count_words);          // clean var for cicle for print general array
     	while (i < count_words - 1) { // cicle for print general array
-        	printf("%d words -> ", i + 1);
-        	printf("%s\n", array[i]); // print [i] word from the array
-        	i++;                           // var for next [i] word
+		if (array[i] == "\n") i++;
+		else{
+			printf("\n%d words -> ", i + 1);
+        		printf("%s  ", array[i]); // print [i] word from the array
+        		i++;
+        	}                           // var for next [i] word
 	}
 	return 0;
 }
@@ -69,9 +72,7 @@ char computing(char array[][16],int count_words){
 
 char stringing(             //
         char array[][16], int count_words)   // function for enter data and check quantity symbols
-{                          //
-    printf("Please use a space after punctuation marks"); //
-    printf("\nEnter u text ==> \n");                        //
+{                          //                    //
     int i = 0;
 	int n = 0;
 	int t;
@@ -81,15 +82,23 @@ char stringing(             //
         memset(array,0,16*count_words);                        // 5 words per 16 symbols
 	while (i<count_words){
 		while ((str = getchar()) != ' '){
-			if (str != ' '){
+			if (str == ' ') n++;
+			if (str == ',') n++;
+			if (str == '.') n++;
+			if (str == ':') n++;
+			if (str == ';') n++;
+			if (str == '"') n++;
+			if (str == '!') n++;
+			if (str == '?') n++;
+                	else {
                 		array[i][n] = str; 
                 		//printf("\nn-> %d",n);  
                 		//printf("\ni-> %d",i);
-						if (str == '\n'){
-							break;
-						}
+				if (str == '\n'){
+					break;
+				}
 				n++;
-			}	
+			}
 		}
 		if (str == '\n'){
 			break;

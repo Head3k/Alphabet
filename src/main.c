@@ -8,7 +8,7 @@ int main()               // main
     int count;
     int count_words; // init var for count words in the text
     printlogo();             // void print start text
-    printf("Enter number of words in text ==> "); //
+    printf("Enter number of words in text and input your text ==> "); //
     scanf("%d\n", &count); // enter count words in the text
     count++;             // for E0F string
     count_words = count;
@@ -21,5 +21,4 @@ int main()               // main
     int i;
     i = print(array, count_words);
     //printf("\n%c",array[0][0]);
-    
 }
