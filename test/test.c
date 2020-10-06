@@ -69,7 +69,6 @@ CTEST(COMPUTING_TEST, FIRST_TEST)
 	if (array[0][0] != array_check[0][0]) result *= 0;
 	if (array[1][1] != array_check[1][1]) result *= 0;
 	if (array[2][2] != array_check[2][2]) result *= 0;
-	printf("RESULT ==> %d",result);
 	ASSERT_EQUAL(expected, result);	
 }
 
@@ -98,6 +97,5 @@ CTEST(COMPUTING_TEST, SECOND_TEST)
 	if (arr[0][0] != arr_check[0][0]) result *= 0;
 	if (arr[1][1] != arr_check[1][1]) result *= 0;
 	if (arr[2][2] != arr_check[2][2]) result *= 0;
-	printf("RESULT ==> %d",result);
 	ASSERT_EQUAL(expected, result);	
 }
