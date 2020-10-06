@@ -4,7 +4,7 @@
 
 CTEST(SORT_TEST, FIRST_TEST)
 {
-	char* k1 = "shit";
+	char* k1 = "I";
 	char* k2 = "am";
 	int result = sort(k1, k2);
 	int expected = 1;
@@ -20,8 +20,24 @@ CTEST(SORT_TEST, SECOND_TEST)
 }
 CTEST(SORT_TEST, THIRD_TEST)
 {
-	char* k1 = "Shit";
-	char* k2 = "am";
+	char* k1 = "CHEESE";
+	char* k2 = "check";
+	int result = sort(k1, k2);
+	int expected = 1;
+	ASSERT_EQUAL(expected, result);
+}
+CTEST(SORT_TEST, FORTH_TEST)
+{
+	char* k1 = "CHEESE";
+	char* k2 = "cHoIce";
+	int result = sort(k1, k2);
+	int expected = 0;
+	ASSERT_EQUAL(expected, result);
+}
+CTEST(SORT_TEST, FIFTH_TEST)
+{
+	char* k1 = "привет";
+	char* k2 = "пока";
 	int result = sort(k1, k2);
 	int expected = 1;
 	ASSERT_EQUAL(expected, result);
