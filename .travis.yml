@@ -1,7 +1,8 @@
 language: c
 compiler: gcc
 
-dist: focal fossa
+dist: xenial
 
 script:
-	- make
+  - git ls-files src/
+  - make

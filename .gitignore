@@ -1,3 +1,7 @@
-a.out
+*.exe
+*.vs
+main
 *.o
-
+*.map
+*.obj
+test
