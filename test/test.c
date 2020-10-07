@@ -46,11 +46,11 @@ CTEST(SORT_TEST, FIFTH_TEST)
 CTEST(COMPUTING_TEST, FIRST_TEST)
 {
     int count_words = 6;
-    char array[5][16] = {"apt", "check", "course", "shit", "word"};
+    char array[5][16] = {"shop", "check", "word", "apt", "course"};
     int result = 1;
     int expected = 1;
     array[count_words][16] = computing(array, count_words); // void function
-    char array_check[5][16] = {"apt", "check", "course", "shit", "word"};
+    char array_check[5][16] = {"apt", "check", "course", "shop", "word"};
     if (array[0][0] != array_check[0][0])
         result *= 0;
     if (array[1][1] != array_check[1][1])
