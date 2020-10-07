@@ -8,7 +8,7 @@ int print(char array[][16], int count_words){
     	while (i < count_words - 1) { // cicle for print general array
 		if (array[i] == "\n") i++;
 		else{
-			printf("\n%d words -> ", i + 1);
+			printf("\n%d word -> ", i + 1);
         		printf("%s  ", array[i]); // print [i] word from the array
         		i++;
         	}                           // var for next [i] word
